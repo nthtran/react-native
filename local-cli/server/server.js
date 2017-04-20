@@ -15,7 +15,7 @@ const runServer = require('./runServer');
  * Starts the React Native Packager Server.
  */
 function server(argv, config, args) {
-  args.projectRoots.concat(args.root);
+  args.projectRoots = args.projectRoots.concat(args.root);
 
   const startedCallback = logReporter => {
     logReporter.update({
